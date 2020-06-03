@@ -1,0 +1,14 @@
+:host {
+    width: 100%;
+}
+
+div {
+    width: 100%;
+    height: 50px;
+    background-color: darkgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex: 1;
+}
