@@ -58,3 +58,37 @@ a:hover {
 .logo-icon {
     width: 45px;
 }
+
+.hamburger-icon {
+    width: 45px;
+    margin-left: 15px;
+    color: white;
+}
+.hamburger-div {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .hamburger-div { 
+        display: flex;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .logo-icon {
+        display: none;
+    }
+
+    .logo {
+        /* margin: 0px; */
+        justify-content: center;
+    }
+}

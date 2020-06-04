@@ -10,7 +10,6 @@ export class NavbarComponent implements OnInit {
   title = 'Hero Game'
   constructor() { }
 
-
   ngOnInit(): void {
   }
 
