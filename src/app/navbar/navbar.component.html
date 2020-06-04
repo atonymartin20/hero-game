@@ -1,6 +1,6 @@
 <div class='container'>
     <div class='hamburger-div'>
-        <img class='hamburger-icon' src='../../assets/images/Hamburger_icon.png' />
+        <img class='hamburger-icon' src='../../assets/images/Hamburger_icon.png' (click)='activateDropdown()' />
     </div>
 
     <div class='logo'>
@@ -21,3 +21,28 @@
         </button>
     </nav>
 </div>
+
+<ng-template [ngIf]='activeDropdown'>
+    <div class='dropdown'>
+        <ul>
+            <li>
+                <h1 class='close' (click)='closeDropdown()'>X</h1>
+            </li>
+            <li>
+                <button class='dropdown-button' (click)='closeDropdown()'>
+                    <a routerLink='/dashboard'>Home</a>
+                </button>
+            </li>
+            <li>
+                <button class='dropdown-button' (click)='closeDropdown()'>
+                    <a routerLink='/dashboard'>Heroes</a>
+                </button>
+            </li>
+            <li>
+                <button class='dropdown-button' (click)='closeDropdown()'>
+                    <a routerLink='/dashboard'>Battle</a>
+                </button>
+            </li>
+        </ul>
+    </div>
+</ng-template>
