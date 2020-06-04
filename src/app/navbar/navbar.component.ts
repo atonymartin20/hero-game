@@ -7,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  title = 'Hero Game'
+  title = 'Hero Game';
+  activeDropdown = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  activateDropdown() : void {
+    this.activeDropdown = true;
+  }
+
+  closeDropdown(): void {
+    this.activeDropdown = false;
+  }
 }
