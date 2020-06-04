@@ -64,8 +64,45 @@ a:hover {
     margin-left: 15px;
     color: white;
 }
+
 .hamburger-div {
     display: none;
+}
+
+.dropdown {
+    width: 100%;
+    background-color: #a6aeb0;
+    padding: 5px;
+    height: calc(100vh - 55px);
+    position: absolute;
+    top: 55px;
+}
+
+.display-none {
+    display: none;
+}
+
+.close {
+    margin-top: 5px;
+    font-size: 2.0rem;
+    text-align: left;
+    padding-left: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+li {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dropdown-button {
+    width: 100%;
+    height: 45px;
 }
 
 @media (max-width: 600px) {
@@ -88,7 +125,6 @@ a:hover {
     }
 
     .logo {
-        /* margin: 0px; */
         justify-content: center;
     }
 }
