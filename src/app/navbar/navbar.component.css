@@ -1,0 +1,130 @@
+:host {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 55px;
+    background-color: #003542;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    flex: 1;
+    font-size: 1.75rem;
+    color: white;
+}
+
+nav {
+    margin-right: 4%;
+}
+
+button {
+    background-color: #003542;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #007e99;
+    background-color: white;
+    color: #003542;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #003542;
+    font-weight: 600;
+}
+
+.logo {
+    margin-left: 4%;
+    height: 55px;
+    background-color: #003542;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.75rem;
+    color: white;
+    width: 270px;
+}
+
+.logo-icon {
+    width: 45px;
+}
+
+.hamburger-icon {
+    width: 45px;
+    margin-left: 15px;
+    color: white;
+}
+
+.hamburger-div {
+    display: none;
+}
+
+.dropdown {
+    width: 100%;
+    background-color: #a6aeb0;
+    padding: 5px;
+    height: calc(100vh - 55px);
+    position: absolute;
+    top: 55px;
+}
+
+.display-none {
+    display: none;
+}
+
+.close {
+    margin-top: 5px;
+    font-size: 2.0rem;
+    text-align: left;
+    padding-left: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+li {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dropdown-button {
+    width: 100%;
+    height: 45px;
+}
+
+@media (max-width: 600px) {
+    .hamburger-div { 
+        display: flex;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .logo-icon {
+        display: none;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+}

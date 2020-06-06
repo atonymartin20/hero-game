@@ -1,0 +1,11 @@
+div {
+    font-size: 62.5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fffff4;
+    flex-direction: column;
+}
