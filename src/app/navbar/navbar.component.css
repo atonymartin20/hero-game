@@ -28,19 +28,13 @@ button {
 }
 
 button:hover {
-    background-color: #007e99;
     background-color: white;
     color: #003542;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-a:hover {
-    color: #003542;
     font-weight: 600;
+}
+
+.nav-button {
+    margin: 2px 5px;
 }
 
 .logo {
