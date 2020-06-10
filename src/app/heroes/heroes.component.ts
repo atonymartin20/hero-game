@@ -8,6 +8,7 @@ import { Hero } from '../hero';
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
+  addAHero: false;
 
   constructor() { }
 
