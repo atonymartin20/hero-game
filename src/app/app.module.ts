@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { BattleComponent } from './battle/battle.component';
+import { AddHeroComponent } from './add-hero/add-hero.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BattleComponent } from './battle/battle.component';
     NavbarComponent,
     DashboardComponent,
     HeroesComponent,
-    BattleComponent
+    BattleComponent,
+    AddHeroComponent
   ],
   imports: [
     BrowserModule,
