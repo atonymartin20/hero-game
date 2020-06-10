@@ -1,4 +1,4 @@
-div {
+.outer-container {
     font-size: 62.5%;
     display: flex;
     justify-content: flex-start;

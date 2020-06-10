@@ -10,14 +10,14 @@
     </div>
 
     <nav>
-        <button>
-            <a routerLink='/dashboard'>Home</a>
+        <button class='nav-button' routerLink='/dashboard' >
+            Home
         </button>
-        <button>
-            <a routerLink='/dashboard'>Heroes</a>
+        <button class='nav-button' routerLink='/heroes'>
+            Heroes
         </button>
-        <button>
-            <a routerLink='/dashboard'>Battle</a>
+        <button class='nav-button' routerLink='/battle'>
+            Battle
         </button>
     </nav>
 </div>
@@ -29,18 +29,18 @@
                 <h1 class='close' (click)='closeDropdown()'>X</h1>
             </li>
             <li>
-                <button class='dropdown-button' (click)='closeDropdown()'>
-                    <a routerLink='/dashboard'>Home</a>
+                <button routerLink='/dashboard' class='dropdown-button' (click)='closeDropdown()'>
+                    Home
                 </button>
             </li>
             <li>
-                <button class='dropdown-button' (click)='closeDropdown()'>
-                    <a routerLink='/dashboard'>Heroes</a>
+                <button routerLink='/heroes' class='dropdown-button' (click)='closeDropdown()'>
+                    Heroes
                 </button>
             </li>
             <li>
-                <button class='dropdown-button' (click)='closeDropdown()'>
-                    <a routerLink='/dashboard'>Battle</a>
+                <button routerLink='/battle' class='dropdown-button' (click)='closeDropdown()'>
+                    Battle
                 </button>
             </li>
         </ul>
