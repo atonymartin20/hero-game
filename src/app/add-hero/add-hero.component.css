@@ -1,0 +1,59 @@
+:host {
+    width: 100%;
+    padding: 10px;
+    font-size: 2.0rem;
+}
+
+.add-hero-component-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-hero-component-div {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.add-hero-component-label {
+    font-size: 1.6rem;
+    min-width: 120px;
+    height: 100%;
+}
+
+input {
+    border-radius: 4px;
+    font-size: 1.5rem;
+    height: 50px;
+    padding-left: 5px;
+    width: 100%;
+    max-width: 500px;
+}
+
+button {
+    background-color: #003542;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin-left: 45px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: white;
+    color: #003542;
+    font-weight: 600;
+}
+
+@media (max-width: 400px) {
+    .add-hero-component-label {
+        font-size: 1.3rem;
+        min-width: 95px;
+    }
+
+    input {
+        font-size: 1.3rem;
+    }
+}
