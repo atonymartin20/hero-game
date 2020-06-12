@@ -8,7 +8,14 @@ import { Hero } from '../hero';
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
-  addHero: boolean;
+  addHero: boolean = false;
+  valueEmittedFromChild: boolean;
+
+  closeAddAHeroParent(valueEmitted) {
+    this.valueEmittedFromChild = valueEmitted;
+    this.addHero = valueEmitted;
+    console.log(valueEmitted)
+  }
 
   constructor() { }
 
@@ -17,7 +24,7 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes(): void {
-
+    console.log('Getting Heroes')
   };
 
   openAddAHero(): void {
