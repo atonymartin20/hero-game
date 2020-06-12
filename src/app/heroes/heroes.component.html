@@ -4,5 +4,5 @@
 </ng-template>
 <ng-template [ngIf]='addHero'>
     <button (click)='closeAddAHero()'>Close</button>
-    <app-add-hero></app-add-hero>
+    <app-add-hero (heroSubmit)='closeAddAHeroParent($event)'></app-add-hero>
 </ng-template>
