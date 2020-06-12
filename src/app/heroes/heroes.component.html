@@ -1,5 +1,8 @@
 <p>heroes works!</p>
-
-<ng-template [ngIf]='addAHero'>
-<app-add-hero></app-add-hero>
+<ng-template [ngIf]='!addHero'>
+    <button (click)='openAddAHero()'>Add Hero</button>
+</ng-template>
+<ng-template [ngIf]='addHero'>
+    <button (click)='closeAddAHero()'>Close</button>
+    <app-add-hero></app-add-hero>
 </ng-template>
