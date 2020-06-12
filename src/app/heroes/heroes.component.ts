@@ -8,7 +8,7 @@ import { Hero } from '../hero';
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
-  addAHero: false;
+  addHero: boolean;
 
   constructor() { }
 
@@ -20,8 +20,12 @@ export class HeroesComponent implements OnInit {
 
   };
 
-  add(): void {
+  openAddAHero(): void {
+    this.addHero = true;
+  }
 
+  closeAddAHero(): void {
+    this.addHero = false;
   }
 
   edit(): void {
