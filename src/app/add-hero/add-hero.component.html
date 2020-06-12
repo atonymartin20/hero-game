@@ -1,1 +1,35 @@
-<p>add-hero works!</p>
+<div class='add-hero-component-container'>
+    <div class='add-hero-component-div'>
+        <label class='add-hero-component-label'>
+            Name: 
+        </label>
+        <input matInput [(ngModel)]='hero.name' placeholder="name" />
+    </div>
+    <div class='add-hero-component-div'>
+        <span class='add-hero-component-label'> 
+            Attack:        
+        </span>
+        <input type='number' matInput [(ngModel)]='hero.atk' placeholder="atk" />
+    </div>
+    <div class='add-hero-component-div'>
+        <span class='add-hero-component-label'>
+            Defense:
+        </span>
+        <input type='number' matInput [(ngModel)]='hero.def' placeholder="def" />
+    </div>
+    <div class='add-hero-component-div'>
+        <label class='add-hero-component-label'>
+            HP:
+        </label>
+        <input type='number' matInput [(ngModel)]='hero.hp' placeholder="hp" />
+    </div>
+    <div class='add-hero-component-div'>
+        <label class='add-hero-component-label'>
+            Level:
+        </label>
+        <input type='number' matInput [(ngModel)]='hero.lvl' placeholder="lvl" />
+    </div>
+    <div class='add-hero-component-div'>
+        <button (click)='addHero()'>Add Hero</button>
+    </div>
+</div>
