@@ -33,3 +33,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Created Heroes Component
 - Created Add Heroes Component
 * Need to create Edit Hero Component
+* Need to create Server
