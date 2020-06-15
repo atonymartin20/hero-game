@@ -28,12 +28,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## To Do List
-- Created Heroes Component
-- Created Add Heroes Component
 * Need to create Edit Hero Component
 * Need to create Server
 * Need to build Battle Component
 * Need to create delete Hero Functionality
 * Need to create Edit Hero Functionality
 * Need to finish Add Hero Functionality
-* 
