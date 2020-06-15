@@ -28,8 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## To Do List
-- Completed Navbar
-- Completed Routing
 - Created Heroes Component
 - Created Add Heroes Component
 * Need to create Edit Hero Component
@@ -38,4 +36,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * Need to create delete Hero Functionality
 * Need to create Edit Hero Functionality
 * Need to finish Add Hero Functionality
-* N
+* 
