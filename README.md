@@ -27,7 +27,11 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-## NEW
-- Completed Navbar
-- Completed Routing
-- Created Heroes Component
+## To Do List
+* Need to create Edit Hero Component
+* Need to create Server
+* Need to build Battle Component
+* Need to create delete Hero Functionality
+* Need to create Edit Hero Functionality
+* Need to finish Add Hero Functionality
+* Need to create Services

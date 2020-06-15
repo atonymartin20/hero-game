@@ -1,5 +1,17 @@
 <p>heroes works!</p>
-
-<ng-template [ngIf]='addAHero'>
-<app-add-hero></app-add-hero>
+<ng-template [ngIf]='!addHero'>
+    <button (click)='openAddAHero()'>Add Hero</button>
+    <ul>
+        <li *ngFor='let hero of heroes'>
+            <a routerLink='/{{hero.id}}'>
+                <span>{{hero.name}}</span>
+            </a>
+            <button class='edit' title='edit hero'>Edit</button>
+            <button class='delete' title='delete hero' (click)='delete(hero)'>x</button>
+        </li>
+    </ul>
+</ng-template>
+<ng-template [ngIf]='addHero'>
+    <button (click)='closeAddAHero()'>Close</button>
+    <app-add-hero (heroSubmit)='closeAddAHeroParent($event)'></app-add-hero>
 </ng-template>
