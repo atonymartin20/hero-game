@@ -39,7 +39,7 @@ export class HeroesComponent implements OnInit {
 
   }
 
-  delete(): void {
+  delete(hero): void {
     
   }
 }
