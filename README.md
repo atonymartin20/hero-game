@@ -35,5 +35,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * Need to create Edit Hero Functionality
 * Need to finish Add Hero Functionality
 * Need to create Services
-
-Beginning to work on Services
