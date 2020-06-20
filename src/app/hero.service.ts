@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Hero } from './hero';
-import { MessageService } from './message.service';
+import { BattleMessageService } from './battle-message.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class HeroService {
     headers: new HttpHeaders({ 'Context-Type': 'application/json' })
   }
 
-  constructor( private http: HttpClient, private messageService: MessageService) { }
+  constructor( private http: HttpClient, private battleMessageService: BattleMessageService) { }
 
   getHeroes(): Observable<Hero[]> {
     return this.http.get<Hero[]>(this.heroesUrl).pipe(
@@ -54,6 +54,7 @@ export class HeroService {
   }
 
   private log(message: string) {
-    this.messageService.add(`HeroService: ${message}`)
+    this.battleMessageService.add(`HeroService: ${message}`)
   }
+
 }
