@@ -47,6 +47,17 @@ button:hover {
     font-weight: 600;
 }
 
+.error-text {
+    color: red;
+    font-size: 1.35rem;
+    padding-bottom: 10px;
+    padding-left: 130px;
+}
+
+@media (max-width: 600px) {
+
+}
+
 @media (max-width: 400px) {
     .add-hero-component-label {
         font-size: 1.3rem;
