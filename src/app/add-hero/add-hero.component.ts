@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroesComponent } from '../heroes/heroes.component';
 
@@ -23,11 +23,12 @@ export class AddHeroComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  @Input() function: any;
   @Output() heroSubmit: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  addHero(): void {
+  addHeroChild(): void {
     if(this.hero.name !== '') {
-      console.log(this.hero.id, this.hero.name, this.hero.atk, this.hero.def, this.hero.hp, this.hero.lvl);
+      this.function(this.hero.name.trim(), this.hero.atk, this.hero.def, this.hero.hp, this.hero.lvl);
       this.heroSubmit.emit(false);
     }
     else {
