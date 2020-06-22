@@ -3,7 +3,7 @@
     <ul>
         <li *ngFor='let hero of heroes'>
             <a routerLink='/{{hero.id}}'>
-                <span>{{hero.id}}{{hero.name}}</span>
+                <span>{{hero.name}}</span>
             </a>
             <button class='edit' title='edit hero'>Edit</button>
             <button class='delete' title='delete hero' (click)='delete(hero)'>x</button>
