@@ -28,14 +28,7 @@ export class AddHeroComponent implements OnInit {
 
   addHeroChild(): void {
     if(this.hero.name !== '') {
-      let hero = {
-        name: this.hero.name.trim(),
-        atk: this.hero.atk,
-        def: this.hero.def,
-        hp: this.hero.hp,
-        lvl: this.hero.lvl
-      }
-      this.function(hero);
+      this.function(this.hero.name.trim(), this.hero.atk, this.hero.def, this.hero.hp, this.hero.lvl)
       this.heroSubmit.emit(false);
     }
     else {
