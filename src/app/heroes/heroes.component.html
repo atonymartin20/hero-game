@@ -1,4 +1,4 @@
-<ng-template [ngIf]='!addAHero'>
+<ng-template [ngIf]='!addHero'>
     <button (click)='openAddAHero()'>Add Hero</button>
     <ul>
         <li *ngFor='let hero of heroes'>
@@ -10,7 +10,7 @@
         </li>
     </ul>
 </ng-template>
-<ng-template [ngIf]='addAHero'>
+<ng-template [ngIf]='addHero'>
     <button (click)='closeAddAHero()'>Close</button>
-    <app-add-hero (heroSubmit)='closeAddAHeroParent($event)' [function]='addHero' ></app-add-hero>
+    <app-add-hero (heroSubmit)='closeAddAHeroParent($event)' [function]='add' ></app-add-hero>
 </ng-template>
