@@ -5,6 +5,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { Hero } from './hero';
 import { BattleMessageService } from './battle-message.service';
+import { type } from 'os';
 
 @Injectable({
   providedIn: 'root'
@@ -65,10 +66,35 @@ export class HeroService {
   }
 
   addHero(hero: Hero): Observable<Hero> {
-    return this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
-      tap((newHero: Hero) => this.log(`added hero with id=${newHero.id}`)),
-      catchError(this.handleError<Hero>('addHero'))
-    )
+    if (hero.name !== '' && typeof hero.name === 'string') {
+      if (typeof hero.atk === 'number') {
+        if (typeof hero.def === 'number') {
+          if (typeof hero.hp === 'number') {
+            if (typeof hero.lvl === 'number') {
+              return this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
+                tap((newHero: Hero) => this.log(`added hero with id=${newHero.id}`)),
+                catchError(this.handleError<Hero>('addHero'))
+              )
+            }
+            else {
+              console.log('hero.lvl is not a number.')
+            }
+          }
+          else {
+            console.log('hero.hp is not a number.')
+          }
+        }
+        else {
+          console.log('hero.def is not a number.')
+        }
+      }
+      else {
+        console.log('hero.atk is not a number.')
+      }
+    }
+    else {
+      console.log('hero.name is not a string or is an empty string.')
+    }
   }
 
   deleteHero(hero: Hero): Observable<Hero> {
