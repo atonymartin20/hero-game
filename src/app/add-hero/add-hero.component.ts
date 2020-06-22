@@ -11,9 +11,9 @@ export class AddHeroComponent implements OnInit {
   hero: Hero = {
     id: HeroesComponent.length,
     name: '',
-    atk: 3,
-    def: 3,
-    hp: 30,
+    atk: 53,
+    def: 9,
+    hp: 130,
     lvl: 1
   };
   error: boolean
@@ -28,7 +28,14 @@ export class AddHeroComponent implements OnInit {
 
   addHeroChild(): void {
     if(this.hero.name !== '') {
-      this.function(this.hero.name.trim(), this.hero.atk, this.hero.def, this.hero.hp, this.hero.lvl);
+      let hero = {
+        name: this.hero.name.trim(),
+        atk: this.hero.atk,
+        def: this.hero.def,
+        hp: this.hero.hp,
+        lvl: this.hero.lvl
+      }
+      this.function(hero);
       this.heroSubmit.emit(false);
     }
     else {
