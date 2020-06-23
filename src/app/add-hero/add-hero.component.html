@@ -5,6 +5,11 @@
         </label>
         <input matInput [(ngModel)]='hero.name' placeholder="name" />
     </div>
+    <ng-template [ngIf]='error'>
+        <div>
+            <p class='error-text'>Name can not be blank.</p>
+        </div>
+    </ng-template>
     <div class='add-hero-component-div'>
         <span class='add-hero-component-label'> 
             Attack:        
@@ -30,6 +35,6 @@
         <input type='number' matInput [(ngModel)]='hero.lvl' placeholder="lvl" />
     </div>
     <div class='add-hero-component-div'>
-        <button (click)='addHero()'>Add Hero</button>
+        <button (click)='addHeroChild()'>Add Hero</button>
     </div>
 </div>

@@ -4,7 +4,15 @@
     font-size: 2.0rem;
 }
 
-button {
+.heroes-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.hero-button {
     background-color: #003542;
     border: none;
     color: white;
@@ -12,10 +20,99 @@ button {
     border-radius: 5px;
     margin-left: 25px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-button:hover {
+.hero-button:hover {
+    background-color: #A9A9A9;
+    color: #003542;
+    font-weight: 600;
+}
+
+.edit {
+    background-color: #003542;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.edit:hover {
     background-color: white;
     color: #003542;
     font-weight: 600;
+}
+
+.delete {
+    background-color: #003542;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.delete:hover {
+    background-color: white;
+    color: #003542;
+    font-weight: 600;
+}
+
+span {
+    font-weight: 500;
+    margin-right: auto;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    background-color: #A9A9A9;
+    margin-bottom: 8px;
+    display: flex;
+    border-radius: 5px;
+    min-width: 375px;
+    width: fit-content;
+    padding: 3px 5px;
+    justify-content: flex-end;
+}
+
+@media (max-width: 600px) {
+    ul {
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    li { 
+        flex-wrap: wrap;
+        font-size: 1.5rem;
+        min-width: 340px;
+        width: 100%;
+    }
+
+    .hero-button {
+        margin: 10px 0px;
+    }
+}
+
+@media (max-width: 375px) {
+    li {
+        font-size: 1.2rem;
+        min-width: 0px;
+        width: 100%;
+    }
+
+    .delete {
+        font-size: 1.2rem;
+    }
+
+    .edit {
+        font-size: 1.2rem;
+    }
+
+    .hero-button {
+        margin: 10px auto;
+    }
 }

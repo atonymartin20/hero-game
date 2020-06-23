@@ -25,8 +25,8 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
-    console.log('Getting Heroes')
+    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
+    console.log('Getting Heroes');
   };
 
   openAddAHero(): void {
@@ -37,11 +37,13 @@ export class HeroesComponent implements OnInit {
     this.addHero = false;
   }
 
-  edit(): void {
-
+  add = (name: string, atk: number, def: number, hp: number, lvl: number) => {
+    console.log(name, atk, def, hp, lvl);
+    this.heroService.addHero({ name, atk, def, hp, lvl } as Hero).subscribe(hero => { this.heroes.push(hero)});
   }
 
-  delete(hero): void {
-    
+  delete(hero: Hero): void {
+    this.heroes = this.heroes.filter(h => h !== hero);
+    this.heroService.deleteHero(hero).subscribe();
   }
 }
