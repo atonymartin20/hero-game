@@ -37,7 +37,7 @@ export class HeroesComponent implements OnInit {
     this.addHero = false;
   }
 
-  add = (name:string, atk: number, def: number, hp: number, lvl: number) => {
+  add = (name: string, atk: number, def: number, hp: number, lvl: number) => {
     console.log(name, atk, def, hp, lvl);
     this.heroService.addHero({ name, atk, def, hp, lvl } as Hero).subscribe(hero => { this.heroes.push(hero)});
   }
