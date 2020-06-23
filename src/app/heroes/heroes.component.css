@@ -78,3 +78,41 @@ li {
     padding: 3px 5px;
     justify-content: flex-end;
 }
+
+@media (max-width: 600px) {
+    ul {
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    li { 
+        flex-wrap: wrap;
+        font-size: 1.5rem;
+        min-width: 340px;
+        width: 100%;
+    }
+
+    .hero-button {
+        margin: 10px 0px;
+    }
+}
+
+@media (max-width: 375px) {
+    li {
+        font-size: 1.2rem;
+        min-width: 0px;
+        width: 100%;
+    }
+
+    .delete {
+        font-size: 1.2rem;
+    }
+
+    .edit {
+        font-size: 1.2rem;
+    }
+
+    .hero-button {
+        margin: 10px auto;
+    }
+}
