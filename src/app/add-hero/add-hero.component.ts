@@ -36,5 +36,4 @@ export class AddHeroComponent implements OnInit {
       console.log('name cannot be empty')
     }
   }
-
 }
