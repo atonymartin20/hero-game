@@ -58,10 +58,35 @@ export class HeroService {
   }
 
   updateHero(hero: Hero): Observable<any> {
-    return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(
-      tap((_) => this.log(`updated hero id=${hero.id}`)),
-      catchError(this.handleError<any>('updatedHero'))
-    )
+    if (hero.name !== '' && typeof hero.name === 'string') {
+      if (typeof hero.atk === 'number') {
+        if (typeof hero.def === 'number') {
+          if (typeof hero.hp === 'number') {
+            if (typeof hero.lvl === 'number') {
+              return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(
+                tap((_) => this.log(`updated hero id=${hero.id}`)),
+                catchError(this.handleError<any>('updatedHero'))
+              )
+            }
+            else {
+              console.log('hero.lvl is not a number.')
+            }
+          }
+          else {
+            console.log('hero.hp is not a number.')
+          }
+        }
+        else {
+          console.log('hero.def is not a number.')
+        }
+      }
+      else {
+        console.log('hero.atk is not a number.')
+      }
+    }
+    else {
+      console.log('hero.name is not a string or is an empty string.')
+    }
   }
 
   addHero(hero: Hero): Observable<Hero> {
