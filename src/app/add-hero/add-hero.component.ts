@@ -33,7 +33,7 @@ export class AddHeroComponent implements OnInit {
     }
     else {
       this.error = true;
-      console.log('name is empty')
+      console.log('name cannot be empty')
     }
   }
 
