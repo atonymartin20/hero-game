@@ -63,10 +63,15 @@ export class HeroService {
         if (typeof hero.def === 'number') {
           if (typeof hero.hp === 'number') {
             if (typeof hero.lvl === 'number') {
-              return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(
-                tap((_) => this.log(`updated hero id=${hero.id}`)),
-                catchError(this.handleError<any>('updatedHero'))
-              )
+              if (typeof hero.img === 'string') {
+                return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(
+                  tap((_) => this.log(`updated hero id=${hero.id}`)),
+                  catchError(this.handleError<any>('updatedHero'))
+                )
+              }
+              else {
+                console.log('hero.img is not a string')
+              }
             }
             else {
               console.log('hero.lvl is not a number.')
@@ -95,10 +100,15 @@ export class HeroService {
         if (typeof hero.def === 'number') {
           if (typeof hero.hp === 'number') {
             if (typeof hero.lvl === 'number') {
-              return this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
-                tap((newHero: Hero) => this.log(`added hero with id=${newHero.id}`)),
-                catchError(this.handleError<Hero>('addHero'))
-              )
+              if (typeof hero.img === 'string') {
+                return this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
+                  tap((newHero: Hero) => this.log(`added hero with id=${newHero.id}`)),
+                  catchError(this.handleError<Hero>('addHero'))
+                )
+              }
+              else {
+                console.log('hero.img is not a string')
+              }
             }
             else {
               console.log('hero.lvl is not a number.')
