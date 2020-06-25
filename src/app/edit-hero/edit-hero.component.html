@@ -2,6 +2,7 @@
     <div class='edit-hero-component-div'>
         <button routerLink='/heroes'>Back</button>
     </div>
+    <img src={{hero.img}} />
     <div class='edit-hero-component-div'>
         <label class='edit-hero-component-label'>
             Name: 
@@ -36,6 +37,12 @@
             Level:
         </label>
         <input type='number' matInput [(ngModel)]='hero.lvl' placeholder="lvl" />
+    </div>
+    <div class='edit-hero-component-div'>
+        <label class='edit-hero-component-label'>
+            IMG URL:
+        </label>
+        <input type='text' matInput [(ngModel)]='hero.img' placeholder="img" />
     </div>
     <div class='edit-hero-component-div'>
         <button (click)='editHero()' routerLink='/heroes'>Update Hero</button>
