@@ -15,7 +15,7 @@ export class AddHeroComponent implements OnInit {
     def: 9,
     hp: 130,
     lvl: 1,
-    img: '',
+    heroIcon: '',
   };
   error: boolean
 
@@ -29,7 +29,7 @@ export class AddHeroComponent implements OnInit {
 
   addHeroChild(): void {
     if(this.hero.name !== '') {
-      this.function(this.hero.name.trim(), this.hero.atk, this.hero.def, this.hero.hp, this.hero.lvl, this.hero.img)
+      this.function(this.hero.name.trim(), this.hero.atk, this.hero.def, this.hero.hp, this.hero.lvl, this.hero.heroIcon)
       this.heroSubmit.emit(false);
     }
     else {

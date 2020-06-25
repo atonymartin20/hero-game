@@ -37,8 +37,8 @@ export class HeroesComponent implements OnInit {
     this.addHero = false;
   }
 
-  add = (name: string, atk: number, def: number, hp: number, lvl: number, img: string) => {
-    this.heroService.addHero({ name, atk, def, hp, lvl, img } as Hero).subscribe(hero => { this.heroes.push(hero)});
+  add = (name: string, atk: number, def: number, hp: number, lvl: number, heroIcon: string) => {
+    this.heroService.addHero({ name, atk, def, hp, lvl, heroIcon } as Hero).subscribe(hero => { this.heroes.push(hero)});
   }
 
   delete(hero: Hero): void {

@@ -2,7 +2,7 @@
     <div class='edit-hero-component-div'>
         <button routerLink='/heroes'>Back</button>
     </div>
-    <img src={{hero.img}} />
+    <img src={{hero.heroIcon}} />
     <div class='edit-hero-component-div'>
         <label class='edit-hero-component-label'>
             Name: 
@@ -42,7 +42,7 @@
         <label class='edit-hero-component-label'>
             IMG URL:
         </label>
-        <input type='text' matInput [(ngModel)]='hero.img' placeholder="img" />
+        <input type='text' matInput [(ngModel)]='hero.heroIcon' placeholder="heroIcon" />
     </div>
     <div class='edit-hero-component-div'>
         <button (click)='editHero()' routerLink='/heroes'>Update Hero</button>

@@ -26,7 +26,7 @@ export class EditHeroComponent implements OnInit {
 
   editHero = () => {
     if (this.hero.name !== '') {
-      console.log(`Updated Hero: ${this.hero.name}, atk: ${this.hero.atk}, def: ${this.hero.def}, hp: ${this.hero.hp}, lvl: ${this.hero.lvl}, img: ${this.hero.img}`)
+      console.log(`Updated Hero: ${this.hero.name}, atk: ${this.hero.atk}, def: ${this.hero.def}, hp: ${this.hero.hp}, lvl: ${this.hero.lvl}, heroIcon: ${this.hero.heroIcon}`)
       this.heroService.updateHero(this.hero).subscribe()
     }
     else {
