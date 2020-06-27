@@ -23,15 +23,15 @@
             <h3>Attacking Hero:</h3>
             <button class='hero-reselect-button'(click)='resetAttackingHero()'>Select a different hero</button>
             <div class='hero-selected-container'>
-                <img src={{attackingHero.heroIcon}} class='chosen-hero-img' />
+                <img src="{{attackingHero['heroIcon']}}" class='chosen-hero-img' />
                 <div class='attributes-div'>
-                    <p>HP: {{attackingHero.hp}}</p>
-                    <p>ATK: {{attackingHero.atk}}</p>
-                    <p>DEF: {{attackingHero.def}}</p>
-                    <p>LVL: {{attackingHero.lvl}}</p>
+                    <p>HP: {{attackingHero['hp']}}</p>
+                    <p>ATK: {{attackingHero['atk']}}</p>
+                    <p>DEF: {{attackingHero['def']}}</p>
+                    <p>LVL: {{attackingHero['lvl']}}</p>
                 </div>
             </div>
-            <span>{{attackingHero.name}}</span>
+            <span>{{attackingHero['name']}}</span>
         </ng-template>
     </div>
 
@@ -59,20 +59,22 @@
             <h3>Defending Hero:</h3>
             <button class='hero-reselect-button' (click)='resetDefendingHero()'>Select a different hero</button>
             <div class='hero-selected-container'>
-                <img src={{defendingHero.heroIcon}} class='chosen-hero-img' />
+                <img src="{{defendingHero['heroIcon']}}" class='chosen-hero-img' />
                 <div class='attributes-div'>
-                    <p>HP: {{defendingHero.hp}}</p>
-                    <p>ATK: {{defendingHero.atk}}</p>
-                    <p>DEF: {{defendingHero.def}}</p>
-                    <p>LVL: {{defendingHero.lvl}}</p>
+                    <p>HP: {{defendingHero['hp']}}</p>
+                    <p>ATK: {{defendingHero['atk']}}</p>
+                    <p>DEF: {{defendingHero['def']}}</p>
+                    <p>LVL: {{defendingHero['lvl']}}</p>
                 </div>
             </div>
-            <span>{{defendingHero.name}}</span>
+            <span>{{defendingHero['name']}}</span>
         </ng-template>
     </div>
 
     <ng-template [ngIf]='defendingHeroSelected' && [ngIf]='attackingHeroSelected'>
-        <button class='battle-button' (click)='battle()'>Begin Battle</button>
-        <app-battle-messages></app-battle-messages>
+        <div class='battle-div'>
+            <button class='battle-button' (click)='battle()'>Begin Battle</button>
+            <app-battle-messages></app-battle-messages>
+        </div>
     </ng-template>
 </div>

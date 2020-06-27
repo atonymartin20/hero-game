@@ -111,11 +111,22 @@ span {
     color: white;
     font-size: 1.5rem;
     border-radius: 5px;
+    margin: 0 auto;
     margin-top: 15px;
+    margin-bottom: 10px;
+    width: 25%;
+
 }
 
 h3 {
     font-size: 1.8rem;
+}
+
+.battle-div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 100%;
 }
 
 @media (max-width: 1300px) {
@@ -141,5 +152,9 @@ h3 {
     .defending-hero-div {
         width: 100%;
         border: none;
+    }
+
+    .battle-button {
+        width: 75%;
     }
 }
