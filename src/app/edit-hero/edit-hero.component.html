@@ -1,0 +1,50 @@
+<div class='edit-hero-component-container'>
+    <div class='edit-hero-component-div'>
+        <button routerLink='/heroes'>Back</button>
+    </div>
+    <img src={{hero.heroIcon}} />
+    <div class='edit-hero-component-div'>
+        <label class='edit-hero-component-label'>
+            Name: 
+        </label>
+        <input matInput [(ngModel)]='hero.name' placeholder="name" />
+    </div>
+    <ng-template [ngIf]='error'>
+        <div>
+            <p class='error-text'>Name cannot be blank.</p>
+        </div>
+    </ng-template>
+    <div class='edit-hero-component-div'>
+        <span class='edit-hero-component-label'> 
+            Attack:        
+        </span>
+        <input type='number' matInput [(ngModel)]='hero.atk' placeholder="atk" />
+    </div>
+    <div class='edit-hero-component-div'>
+        <span class='edit-hero-component-label'>
+            Defense:
+        </span>
+        <input type='number' matInput [(ngModel)]='hero.def' placeholder="def" />
+    </div>
+    <div class='edit-hero-component-div'>
+        <label class='edit-hero-component-label'>
+            HP:
+        </label>
+        <input type='number' matInput [(ngModel)]='hero.hp' placeholder="hp" />
+    </div>
+    <div class='edit-hero-component-div'>
+        <label class='edit-hero-component-label'>
+            Level:
+        </label>
+        <input type='number' matInput [(ngModel)]='hero.lvl' placeholder="lvl" />
+    </div>
+    <div class='edit-hero-component-div'>
+        <label class='edit-hero-component-label'>
+            IMG URL:
+        </label>
+        <input type='text' matInput [(ngModel)]='hero.heroIcon' placeholder="heroIcon" />
+    </div>
+    <div class='edit-hero-component-div'>
+        <button (click)='editHero()' routerLink='/heroes'>Update Hero</button>
+    </div>
+</div>

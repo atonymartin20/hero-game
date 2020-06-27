@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class BattleMessageService {
   messages: string[] = [];
+
   constructor() { }
 
   add (message: string) {
@@ -14,5 +15,4 @@ export class BattleMessageService {
   clear() {
     this.messages = [];
   }
-  
 }

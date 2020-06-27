@@ -7,7 +7,7 @@
     </div>
     <ng-template [ngIf]='error'>
         <div>
-            <p class='error-text'>Name can not be blank.</p>
+            <p class='error-text'>Name cannot be blank.</p>
         </div>
     </ng-template>
     <div class='add-hero-component-div'>
@@ -33,6 +33,12 @@
             Level:
         </label>
         <input type='number' matInput [(ngModel)]='hero.lvl' placeholder="lvl" />
+    </div>
+    <div class='add-hero-component-div'>
+        <label class='add-hero-component-label'>
+            IMG URL:
+        </label>
+        <input type='number' matInput [(ngModel)]='hero.heroIcon' placeholder="heroIcon" />
     </div>
     <div class='add-hero-component-div'>
         <button (click)='addHeroChild()'>Add Hero</button>

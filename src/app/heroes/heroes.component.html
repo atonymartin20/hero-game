@@ -4,7 +4,7 @@
         <ul>
             <li *ngFor='let hero of heroes'>
                 <span>{{hero.name}}</span>
-                <button routerLink='/{{hero.id}}' class='edit' title='edit hero'>Edit</button>
+                <button routerLink='/edit/{{hero.id}}' class='edit' title='edit hero'>Edit</button>
                 <button class='delete' title='delete hero' (click)='delete(hero)'>x</button>
             </li>
         </ul>

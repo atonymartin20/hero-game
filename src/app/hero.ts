@@ -5,4 +5,5 @@ export interface Hero {
     def: number;
     hp: number;
     lvl: number;
+    heroIcon: string;
 }

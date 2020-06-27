@@ -20,7 +20,6 @@ export class HeroService {
 
   getHeroes(): Observable<Hero[]> {
     return this.http.get<Hero[]>(this.heroesUrl).pipe(
-      tap((_) => this.log('fetched heroes')),
       catchError(this.handleError<Hero[]>('getHeroes', []))
     )
   }
@@ -29,10 +28,6 @@ export class HeroService {
     const url = `${this.heroesUrl}/?id=${id}`;
     return this.http.get<Hero[]>(url).pipe(
       map((heroes) => heroes[0]),
-      tap((h) => {
-        const outcome = h ? `fetched` : `did not find`;
-        this.log(`${outcome} hero id=${id}`);
-      }),
       catchError(this.handleError<Hero>(`getHero id=${id}`))
     )
   }
@@ -40,7 +35,6 @@ export class HeroService {
   getHero(id: number): Observable<Hero> {
     const url = `${this.heroesUrl}/${id}`;
     return this.http.get<Hero>(url).pipe(
-      tap((_) => this.log(`fetched hero id=${id}`)),
       catchError(this.handleError<Hero>(`getHero id=${id}`))
     )
   }
@@ -53,15 +47,48 @@ export class HeroService {
     }
   }
 
-  private log(message: string) {
-    this.battleMessageService.add(`HeroService: ${message}`)
+  clearMessages() {
+    this.battleMessageService.clear();
+  }
+  
+  log(message: string) {
+    this.battleMessageService.add(`${message}`)
   }
 
   updateHero(hero: Hero): Observable<any> {
-    return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(
-      tap((_) => this.log(`updated hero id=${hero.id}`)),
-      catchError(this.handleError<any>('updatedHero'))
-    )
+    if (hero.name !== '' && typeof hero.name === 'string') {
+      if (typeof hero.atk === 'number') {
+        if (typeof hero.def === 'number') {
+          if (typeof hero.hp === 'number') {
+            if (typeof hero.lvl === 'number') {
+              if (typeof hero.heroIcon === 'string') {
+                return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(
+                  catchError(this.handleError<any>('updatedHero'))
+                )
+              }
+              else {
+                console.log('hero.heroIcon is not a string')
+              }
+            }
+            else {
+              console.log('hero.lvl is not a number.')
+            }
+          }
+          else {
+            console.log('hero.hp is not a number.')
+          }
+        }
+        else {
+          console.log('hero.def is not a number.')
+        }
+      }
+      else {
+        console.log('hero.atk is not a number.')
+      }
+    }
+    else {
+      console.log('hero.name is not a string or is an empty string.')
+    }
   }
 
   addHero(hero: Hero): Observable<Hero> {
@@ -70,10 +97,14 @@ export class HeroService {
         if (typeof hero.def === 'number') {
           if (typeof hero.hp === 'number') {
             if (typeof hero.lvl === 'number') {
-              return this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
-                tap((newHero: Hero) => this.log(`added hero with id=${newHero.id}`)),
-                catchError(this.handleError<Hero>('addHero'))
-              )
+              if (typeof hero.heroIcon === 'string') {
+                return this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
+                  catchError(this.handleError<Hero>('addHero'))
+                )
+              }
+              else {
+                console.log('hero.heroIcon is not a string')
+              }
             }
             else {
               console.log('hero.lvl is not a number.')
@@ -100,7 +131,6 @@ export class HeroService {
     const id = typeof hero === 'number' ? hero : hero.id;
     const url = `${this.heroesUrl}/${id}`;
     return this.http.delete<Hero>(url, this.httpOptions).pipe(
-      tap((_) => this.log(`deleted hero id=${id}`)),
       catchError(this.handleError<Hero>('deleteHero'))
     )
   }
