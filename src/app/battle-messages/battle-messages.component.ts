@@ -8,7 +8,7 @@ import { BattleMessageService } from '../battle-message.service';
 })
 export class BattleMessagesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public battleMessageService: BattleMessageService) { }
 
   ngOnInit(): void {
   }

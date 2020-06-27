@@ -1,1 +1,8 @@
-<p>battle-messages works!</p>
+<div *ngIf='battleMessageService.messages.length' class='battle-messages-outside-container'>
+    <button class='clear-button' (click)='battleMessageService.clear()'>clear</button>
+    <div class='battle-messages-div'>
+        <div *ngFor='let message of battleMessageService.messages' class='messages-div' >
+            {{message}}
+        </div>
+    </div>
+</div>
